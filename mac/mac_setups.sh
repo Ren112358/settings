@@ -135,7 +135,6 @@ brew install python3
 brew cask install docker
 brew cask install google-chrome
 brew cask install iterm2
-brew cask install line
 brew cask install slack
 brew cask install visual-studio-code
 brew cask install zoomus
@@ -157,6 +156,7 @@ pip3 install jupyter
 pip3 install seaborn
 pip3 install tensorflow
 
+# --- reboot mac ---
 read -p "All process done! Reboot your Mac? [Y/n]:" str
 if [ "$srt" = "Y" ] || [ "$srt" == "y" ]; then
     echo "Reboot your Mac in 5 seconds"
