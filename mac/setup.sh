@@ -117,10 +117,10 @@ killall Dock
 # -------------------------
 # --- software installs ---
 # -------------------------
-# install Command Line Tools for Xcode
+# Command Line Tools for Xcode
 xcode-select --install
 
-# install Homebrew
+# Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew bundle
