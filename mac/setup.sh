@@ -111,67 +111,13 @@ killall Dock
 # -------------------------
 # --- software installs ---
 # -------------------------
-
 # install Command Line Tools for Xcode
 xcode-select --install
 
 # install Homebrew
-# TODO: check URL just in case
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
-brew tap caskroom/cask
-brew update
-
-# --- brew installs without GUI ---
-brew install zsh
-echo "/usr/local/bin/zsh" >> /etc/shells
-sudo chsh -s /usr/local/bin/zsh  # change shell to zsh
-brew install git
-brew install neovim
-brew install tmux
-brew install python3
-
-# --- brew installs with GUI ---
-brew cask install docker
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install slack
-brew cask install visual-studio-code
-brew cask install zoomus
-brew tap homebrew/cask-fonts
-brew caskinstall font-fira-code
-
-# intall TeX
-brew cask install mactex
-sudo tlmgr update ---self --all
-sudo tlmgr paper a4
-
-# --- pip installs ---
-pip3 install numpy
-pip3 install scipy
-pip3 install pandas
-pip3 install matplotlib
-pip3 install scikit-learn
-pip3 install jupyter
-pip3 install seaborn
-pip3 install tensorflow
+brew bundle
 
 # --- reboot mac ---
-read -p "All process done! Reboot your Mac? [Y/n]:" str
-if [ "$srt" = "Y" ] || [ "$srt" == "y" ]; then
-    echo "Reboot your Mac in 5 seconds"
-    now = 0
-    goal = 5
-    while [[ $now -lt $goal ]]; do
-        echo $(($goal - $now));
-        sleep 1
-        now=$((${now}+1))
-    done
-    echo "See you, $(whoami)!!"
-    sudo reboot
-else
-    echo "Reboot your Mac later."
-    echo "See you, $(whoami)!!"
-fi
-
-exit 0
+sudo reboot
