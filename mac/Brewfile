@@ -1,0 +1,17 @@
+cask_args appdir: "/Applications"
+
+tap "caskroom/cask"
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+brew "git"
+brew "neovim"
+brew "tmux"
+brew "zsh"
+
+cask "docker"
+cask "google-chrome"
+cask "iterm2"
+cask "slack"
+cask "visual-studio-code"
+cask "zoomus"
