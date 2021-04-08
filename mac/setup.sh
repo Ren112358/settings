@@ -125,5 +125,8 @@ xcode-select --install
 brew update
 brew bundle
 
-# --- reboot mac ---
+# pip
+pip install pipenv
+
+# --- reboot Mac ---
 sudo reboot
