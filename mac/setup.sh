@@ -128,5 +128,10 @@ brew bundle
 # pip
 pip install pipenv
 
+# -------------------------
+# --- software installs ---
+# -------------------------
+chsh -s /usr/local/bin/zsh
+
 # --- reboot Mac ---
 sudo reboot
