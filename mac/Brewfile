@@ -7,7 +7,7 @@ tap "homebrew/core"
 brew "git"
 brew "neovim"
 brew "tmux"
-brew "zsh"
+brew "python3"
 
 cask "docker"
 cask "google-chrome"
