@@ -2,8 +2,8 @@
 # --- Mac preferences setups ---
 # ------------------------------
 
-# --- boot ---
-# make no sound when you boot
+# --- Mac start-up sound ---
+# make no sound when you start up
 sudo nvram SystemAudioVolume=" "
 
 # --- freeze or crash ---
