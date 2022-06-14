@@ -1,0 +1,69 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+# path
+export PATH=~/bin:$PATH
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# history
+HISTFILE=~/work/dotfils/zsh/.zsh_his
+HISTSIZE=1000
+SAVEHIST=1000
+setopt extended_history
+setopt hist_ignore_dups
+
+# add directory after 'cd' to directory stack
+setopt auto_pushd
+
+# when pushd, don't add if directory already included in stack
+setopt pushd_ignore_dups
+
+# correct spell
+setopt correct
+
+# 'ls' after 'cd'
+chpwd() { ls -ltrGF }
+
+# alias
+# list show
+alias ls='ls -GF'
+alias ll='ls -lGF'
+alias lla='ls -laGF'
+
+# change directory
+alias up='cd ..'
+
+# file change confirmation
+alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -i'
+
+alias watch='watchexec'
+alias py='python3'
+alias t='tmux'
+
+# open google chrome
+alias ggl='open -a google\ chrome'
+alias slack='open -a slack'
+alias mail='open -a thunderbird'
+
+# ssh
+alias ssh='~/bin/ssh-change-color.sh'
+
+# vi, vim -> neovim
+alias vi='nvim'
+alias vim='nvim'
+
+# pbcopy
+alias pbc='pbcopy'

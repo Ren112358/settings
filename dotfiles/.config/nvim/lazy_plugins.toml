@@ -1,0 +1,42 @@
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+
+[[plugins]]
+repo = 'lervag/vimtex'
+on_ft = 'tex'
+hook_source = '''
+    let g:vimtex_compiler_latexmk = {
+        'background': 1,
+        'build_dir': '',
+        'continuous': 1,
+        'options': [
+            '-pdfdvi',
+            '-verbose',
+            '-file-line-error',
+            '-synctex=1',
+            '-interaction=nonstopmode',
+        ],
+        }
+    let g:vimtex_view_general_viewer = '/Application/Preview.app'
+    let g:vimtex_view_general_options = '-r @line @pdf @tex'
+'''
+
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+hook_add = '''
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#enable_camel_case = 0
+    let g:deoplete#enable_ignore_case = 0
+    let g:deoplete#enable_refresh_always = 0
+    let g:deoplete#enable_smart_case = 1
+    let g:deoplete#enable_buffer_path = 1
+
+    let g:deoplete#max_list = 1000
+
+    let g:deoplete#auto_complete_delay = 0
+    let g:deoplete#auto_complete_length = 1
+'''
